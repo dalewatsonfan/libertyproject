@@ -1,0 +1,30 @@
+{% extends "liberty/layout.html"%}
+
+{% load static %}
+
+{% block body %}
+<div class="container">
+    <div class="column" style="float: left; width: 50%;">
+        <a href="static/liberty/audiolog20.pdf" download="audiolog">
+            <img src="static/liberty/images/audioLog20.png" style="object-fit:contain;
+            width:400px;
+            height:500px;
+            border: 1px solid #555">
+        </a>
+        <img src="static/liberty/images/advert89.jpg" style="object-fit:contain;
+        width:400px;
+        height:500px;">
+    </div>
+    <div class="column" style="float: left; width: 50%;">
+        <img src="static/liberty/images/scannedLetter.png" style="object-fit:contain;
+        width:400px;
+        height:500px;">
+        <a href="static/liberty/audioLog4.pdf" download="audiolog">
+            <img src="static/liberty/images/audiolog4.png" style="object-fit:contain;
+            width:400px;
+            height:500px;
+            border: 1px solid #555">
+        </a>
+    </div>
+</div> 
+{% endblock %}

@@ -1,0 +1,20 @@
+h2{
+    color: #e8e9ed;
+}
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.fit {
+    object-fit:contain;
+    width:200px;
+    height:300px;
+    border: solid 1px #CCC;
+}

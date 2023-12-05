@@ -1,0 +1,35 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}The Liberty Project{%endblock%}</title>
+        <link href="{% static 'liberty/styles.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css">
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+        <script src="{% static 'liberty/liberty.js' %}" type="text/babel"></script>
+    </head>
+    <body class="terminal">
+        <div class="container">
+            <div class="terminal-nav">
+                <header class="terminal-logo">The Liberty Project</header>
+                <nav class="terminal-menu">
+                    <ul>
+                        <li>
+                            <a class="menu-item" href="{% url 'index'%}">Home</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="{% url 'about'%}">About Us</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="{% url 'login'%}">Archive</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        {% block body%}
+        {% endblock %}
+    </body>
+</html>

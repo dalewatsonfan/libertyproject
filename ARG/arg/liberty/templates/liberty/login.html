@@ -1,0 +1,23 @@
+{% extends "liberty/layout.html"%}
+
+{% block body %}
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Login</legend>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input id="username" name="username" type="text" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="pw">Password:</label>
+                <input id="pw" name="pw" type="password">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default btn-ghost" type="submit" role="button" name="submit" id="submit">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+</div> 
+{% endblock %}
